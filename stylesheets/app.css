@@ -13,6 +13,7 @@ basically, i'm setting the height of the <ul> and each <li> and only on :hover s
 	margin:0;
 	padding:0;
 	border:0;
+	-webkit-text-size-adjust:none;
 }
 html, body {
 	width:100%;
@@ -48,7 +49,7 @@ h1.c {
 	opacity:1;
 }
 h1:after {
-	content:"↕";
+	content:"\2195";
 	opacity:.75;
 	position:relative;
 	top:-0.1em;
@@ -182,7 +183,7 @@ h1:after {
 	text-align:center;
 	text-transform:uppercase;
 	opacity:.5;
-	margin:0 0 1em;
+	margin:1.5em 0 1em;
 }
 img {
 	max-width:100%;
@@ -210,7 +211,11 @@ hr {
 	margin:40px 100px;
 }
 header > div, .main {
-	padding:2em 3em;
+	padding:2em 1.5em;
+}
+.mainn {
+	padding:2em 1.5em 0;
+	margin-bottom:-2em;
 }
 .mainn h1 {
 	color:#040407;
@@ -230,7 +235,7 @@ header > div, .main {
 	}
 	.mainn {
 		width:42em;
-		margin:0 auto 2em;
-		padding:1em 3em;
+		margin:0 auto -1em;
+		padding:1em 3em 0;
 	}
 }
