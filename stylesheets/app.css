@@ -212,6 +212,13 @@ hr {
 header > div, .main {
 	padding:2em 3em;
 }
+.mainn h1 {
+	color:#040407;
+	text-shadow:none;
+}
+.mainn h1:after {
+	display:none;
+}
 @media screen and (min-width:42em) {
 	header > div, .main {
 		width:42em;
@@ -219,6 +226,11 @@ header > div, .main {
 		padding:2em 3em;
 	}
 	.main {
+		padding:1em 3em;
+	}
+	.mainn {
+		width:42em;
+		margin:0 auto 2em;
 		padding:1em 3em;
 	}
 }
