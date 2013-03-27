@@ -185,9 +185,16 @@ h1:after {
 	opacity:.5;
 	margin:1.5em 0 1em;
 }
-h3 a {
+h3 a:link, h3 a:visited {
 	text-decoration:none;
 	color:#3d97fd;
+	font-size:135%;
+}
+h3 a:hover {
+	opacity:.75;
+}
+h3 a:active {
+	opacity:.5;
 }
 img {
 	max-width:100%;
