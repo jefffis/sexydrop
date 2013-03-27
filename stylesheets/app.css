@@ -1,0 +1,189 @@
+/*
+
+// CSS
+these styles can be anything, but this was from a recent project.
+
+basically, i'm setting the height of the <ul> and each <li> and only on :hover showing all of them. when clicking a list item, that is then showed as .selected when a user :hoversout of the <ul>
+
+*/
+* {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+	border:0;
+}
+html, body {
+	width:100%;
+	height:auto;
+	font:normal 100%/1.5 'Helvetica Neue', Arial, sans-serif;
+	color:#444;
+}
+html {
+	height:100%;
+	min-height:100%;
+	background:#efefef;
+}
+body {
+	padding:2em;
+}
+h1 {
+	line-height:1.1;
+	margin:0 0 .5em;
+	letter-spacing:-.07em;
+}
+.c {
+	text-align:center;
+	font-weight:normal;
+	opacity:.5;
+	margin:0 0 1em;
+}
+.list-wrap {
+	position:relative;
+	margin:0 0 2em;
+	height:43px;
+}
+.list {
+	width:100%;
+	background:red;
+	height:42px;
+	border:1px solid #ccc;
+	padding:0;
+	position:absolute;
+	left:0;
+	top:0;
+	overflow:hidden;
+	outline:2px solid rgba(0,0,0,0.15);
+	/*box-shadow:0 0 5px 0 rgba(0,0,0,0.1);
+	border-radius:3px;
+	box-shadow:0 0 3px rgba(0,0,0,0.2), 0 0 15px rgba(0,0,0,0.1);*/
+}
+.no-js .list:hover, .list.show {
+	height:auto;
+	overflow:visible;
+}
+.list:before {
+	content:"";
+	display:block;
+	position:absolute;
+	border-top:5px solid white;
+	border-right:5px solid transparent;
+	border-left:5px solid transparent;
+	top:23px;
+	right:10px;
+	z-index:2;
+}
+.list:after {
+	content:"";
+	display:block;
+	position:absolute;
+	border-bottom:5px solid white;
+	border-right:5px solid transparent;
+	border-left:5px solid transparent;
+	top:13px;
+	right:10px;
+	z-index:2;
+}
+.list span {
+	cursor:pointer;
+	display:block;
+	position:absolute;
+	top:0;
+	right:0;
+	height:40px;
+	width:30px;
+	background:#040407;
+	z-index:1;
+	border-left:1px solid rgba(0,0,0,0.1);
+	/*border-radius:0 3px 3px 0;*/
+}
+.list span:active {
+	opacity:.75;
+}
+.list li {
+	list-style:none;
+	color:white;
+	display:none;
+	/*border-radius:3px 3px 0 0;*/
+	padding:0;
+}
+.list li + li {
+	border-radius:0;
+}
+.list li:last-child {
+	border-radius:0 0 3px 3px;
+}
+.no-js .list:hover li, .list .selected, .list.show li {
+	display:list-item;
+}
+.list li a {
+	text-decoration:none;
+	display:block;
+	height:40px;
+	padding:10px;
+	line-height:1.3;
+	background:white;
+	color:#555;
+	/*border-bottom:1px solid rgba(0,0,0,0.1);
+	border-top:1px solid rgba(255,255,255,0.25);
+	border-radius:3px 3px 0 0;
+	box-shadow:0 1px 0 rgba(255,255,255,0.25) inset, 0 -1px 0 rgba(0,0,0,0.1) inset;
+	box-shadow:0 1px 0 rgba(0,0,0,0.1) inset, 0 -1px 0 rgba(0,0,0,0.1) inset;
+	text-shadow:0 1px 0 rgba(0,0,0,0.3), 0 2px 1px rgba(0,0,0,0.05);*/
+	font-weight:bold;
+}
+.list li:first-child a {
+	/*border-top-color:transparent;*/
+}
+.list li + li a {
+	border-radius:0;
+}
+.list li:last-child {
+	border:0;
+	/*border-radius:0 0 3px 3px;
+	border-bottom-color:transparent;
+	box-shadow:0 1px 0 rgba(255,255,255,0.25) inset;*/
+}
+.list.show li a:hover, .no-js .list:hover .selected a/*, .list.show .selected a*/ {
+	background:#555;
+	color:white;
+	text-shadow:0 1px 0 rgba(0,0,0,0.3), 0 2px 1px rgba(0,0,0,0.05);
+	box-shadow:0 1px 0 rgba(0,0,0,0.1) inset, 0 -1px 0 rgba(0,0,0,0.1) inset;
+}
+.list li a:active {
+	background:#040407;
+	color:white;
+}
+.list:hover .selected a {
+	height:40px;
+}
+.no-js .list:hover .selected a, .list.show .selected a {
+	
+}
+.loading {
+	text-align:center;
+	text-transform:uppercase;
+	opacity:.5;
+	margin:0 0 1em;
+}
+h2 {
+	margin:1em 0 .25em;
+}
+p {
+	font-size:85%;
+	margin:0 0 1em;
+}
+hr {
+	border:0;
+	height:6px;
+	background:#ccc;
+	margin:40px 100px;
+}
+@media screen and (min-width:42em) {
+	body {
+		width:42em;
+		margin:0 auto 2em;
+		padding:2em 3em;
+	}
+}
