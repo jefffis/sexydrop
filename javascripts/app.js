@@ -39,7 +39,7 @@ $(function(){
 		var $this = $(this);
 		var $content = $('#content');
 		var $this_url = $this.attr('href');
-		$list_items.parent().removeClass('selected');
+		$list_items.parent().removeClass('selected init');
 		$this.parent().addClass('selected');
 		$content.prepend($drop_loading);
 		$content.load($this_url+' #contentttt', 

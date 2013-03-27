@@ -8,27 +8,45 @@
 		
 		<title dir="ltr">Sexy dropdowns by Jefff</title>
 
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css' />
 		<link href="stylesheets/app.css" media="all" rel="stylesheet" type="text/css" />
 
 	</head>
 	<body>
 
-		<!-- htmlness -->
-		<h1 class="c">Sexy dropdowns</h1>
-		<div class="list-wrap">
-			<ul id="list" class="list">
-				<li class="selected"><a href="content.html">Some Title</a></li>
-				<li><a href="contentt.html">Some Other Title</a></li>
-				<li><a href="contenttt.html">Some Tertiary Title</a></li>
-				<span></span>
-			</ul>
-		</div>
+		<header>
+			<div>
+				<!-- htmlness -->
+				<h1 class="c">Sexy dropdowns</h1>
+				<div class="list-wrap">
+					<ul id="list" class="list">
+						<li class="init"><a href="content.html">Some Title</a></li>
+						<li><a href="contentt.html">Some Other Title</a></li>
+						<li><a href="contenttt.html">Some Tertiary Title</a></li>
+						<li><a href="content.html">Some Title</a></li>
+						<li><a href="contentt.html">Some Other Title</a></li>
+						<li><a href="contenttt.html">Some Tertiary Title</a></li>
+						<li><a href="content.html">Some Title</a></li>
+						<li><a href="contentt.html">Some Other Title</a></li>
+						<li><a href="contenttt.html">Some Tertiary Title</a></li>
+						<span></span>
+					</ul>
+				</div>
+			</div>
+		</header>
+
 		<div id="content"></div>
 
-		<p>This is a test (semi in-production now) about redoing how we normally build and style dropdown lists. Typically we use the <code>&lt;select&gt;</code> element to acheive this, and then use some JS to do something with the selection. Not only is this uber-hard &amp; limiting in terms of styling (this has been another bane of designers/devs), it&rsquo;s also a farce.</p>
-		<p>It is afarce because it <strong>goes against the inherit nature of the <code>&lt;select&gt;</code> element.</strong> The browser expects this to be used inside a <code>&lt;form&gt;</code> element, and it is also not expecting anything to be changed on the page because of a user selection. It is also not expecting to be redirected elsewhere because of said user selection.</p>
-		<h2>Redoing the dropdown</h2>
-		<p>By redoing this as an unordered list with normal hyperlinks inside them, this is way more intuitive to the browser. It is also way easier to style, and can simply made to work cross-browser and on desktop, tablet and mobile. We can easily load in content via AJAX based on the link the user clicks on, or just send them on their merry way. <strong>Lastly, if JS is disabled for users, the links and experience will be just as the browsers intended them to be.</strong></p>
+		<div class="main">
+
+			<img src="http://fc02.deviantart.net/fs70/f/2012/299/e/6/twister_special__instagram_filters__by_racer5353-d5j17aa.jpg" />
+
+			<p>This is a test (semi in-production now) about redoing how we normally build and style dropdown lists. Typically we use the <code>&lt;select&gt;</code> element to acheive this, and then use some JS to do something with the selection. Not only is this uber-hard &amp; limiting in terms of styling (this has been another bane of designers/devs), it&rsquo;s also a farce.</p>
+			<p>It is afarce because it <strong>goes against the inherit nature of the <code>&lt;select&gt;</code> element.</strong> The browser expects this to be used inside a <code>&lt;form&gt;</code> element, and it is also not expecting anything to be changed on the page because of a user selection. It is also not expecting to be redirected elsewhere because of said user selection.</p>
+			<h2>Redoing the dropdown</h2>
+			<p>By redoing this as an unordered list with normal hyperlinks inside them, this is way more intuitive to the browser. It is also way easier to style, and can simply made to work cross-browser and on desktop, tablet and mobile. We can easily load in content via AJAX based on the link the user clicks on, or just send them on their merry way. <strong>Lastly, if JS is disabled for users, the links and experience will be just as the browsers intended them to be.</strong></p>
+
+		</div>
 
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script src="javascripts/app.js"></script>
