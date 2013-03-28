@@ -78,28 +78,6 @@ h1:after {
 	height:auto;
 	overflow:visible;
 }
-.list:before {
-	content:"";
-	display:block;
-	position:absolute;
-	border-top:5px solid white;
-	border-right:5px solid transparent;
-	border-left:5px solid transparent;
-	top:23px;
-	right:10px;
-	z-index:2;
-}
-.list:after {
-	content:"";
-	display:block;
-	position:absolute;
-	border-bottom:5px solid white;
-	border-right:5px solid transparent;
-	border-left:5px solid transparent;
-	top:13px;
-	right:10px;
-	z-index:2;
-}
 .list span {
 	cursor:pointer;
 	display:block;
@@ -113,8 +91,30 @@ h1:after {
 	border-left:1px solid rgba(0,0,0,0.1);
 	/*border-radius:0 3px 3px 0;*/
 }
+.list span:before {
+	content:"";
+	display:block;
+	position:absolute;
+	border-top:5px solid white;
+	border-right:5px solid transparent;
+	border-left:5px solid transparent;
+	top:23px;
+	right:10px;
+	z-index:2;
+}
+.list span:after {
+	content:"";
+	display:block;
+	position:absolute;
+	border-bottom:5px solid white;
+	border-right:5px solid transparent;
+	border-left:5px solid transparent;
+	top:13px;
+	right:10px;
+	z-index:2;
+}
 .list span:active {
-	opacity:.75;
+	background:#001E40;
 }
 .list li {
 	list-style:none;
@@ -169,16 +169,12 @@ h1:after {
 .list.show .selected a {
 	background:#fbb16e;
 }
-.list li a:active {
-	background:#040407;
-	color:white;
+.list.show li a:active {
+	background:#B55500 !important;
 }
-.list:hover .selected a {
+/*.list:hover .selected a {
 	height:40px;
-}
-.no-js .list:hover .selected a, .list.show .selected a {
-	
-}
+}*/
 .loading {
 	text-align:center;
 	text-transform:uppercase;
@@ -189,6 +185,14 @@ h3 a:link, h3 a:visited {
 	text-decoration:none;
 	color:#3d97fd;
 	font-size:135%;
+	display:block;
+	text-indent:-9999px;
+}
+h3 a:after {
+	content:"\262D";
+	display:block;
+	text-indent:0;
+	margin:-2em 0 0;
 }
 h3 a:hover {
 	opacity:.75;

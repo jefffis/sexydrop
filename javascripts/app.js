@@ -20,18 +20,22 @@ $(function(){
 	$html.removeClass('no-js');
 
 	//tech drop hover
-	$list.hover(function(){
+	/*$list.hover(function(){
 		var $this = $(this);
 		$this.addClass('show');
 	},function(){
 		var $this = $(this);
 		$this.removeClass('show');
-	});
+	});*/
 
 	//touch shutff
 	//since :hover don't exist in touch
 	$list_trigger.on('click',function(){
-		$list.addClass('show');
+		if($list.hasClass('show')){
+			$list.removeClass('show');
+		}else{
+			$list.addClass('show');
+		}
 	});
 
 	//tech drop loading
@@ -39,6 +43,10 @@ $(function(){
 		var $this = $(this);
 		var $content = $('#content');
 		var $this_url = $this.attr('href');
+		if(!$list.hasClass('show')){
+			$list.addClass('show');
+			return false;
+		}
 		$list_items.parent().removeClass('selected init');
 		$this.parent().addClass('selected');
 		$content.prepend($drop_loading);
@@ -48,6 +56,7 @@ $(function(){
 			}
 		);
 		$list.removeClass('show');
+
 		return false;
 	});
 
