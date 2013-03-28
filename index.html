@@ -11,6 +11,23 @@
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css' />
 		<link href="stylesheets/app.css" media="all" rel="stylesheet" type="text/css" />
 
+		<link rel="shortcut icon" type="image/x-icon" href="http://jefff.co//images/favicon.ico" />
+		<link rel="author" href="http://jefff.co/humans.txt" />
+
+		<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-22790184-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' :'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+		</script>
+
 	</head>
 	<body>
 
@@ -40,7 +57,7 @@
 		<div class="main">
 
 			<p>This is a test (semi in-production now) about <strong>redoing how we normally build and style dropdown lists</strong>. Typically we use the <code>&lt;select&gt;</code> element to acheive this, and then use some JS to do something with the selection. Not only is this <strong>uber-hard &amp; limiting in terms of styling</strong> (this has been another bane of designers/devs), it&rsquo;s also a farce.</p>
-			<p>It&rsquo;s a farce because it <strong>goes against the inherit nature of the <code>&lt;select&gt;</code> element.</strong> The browser expects this to be used inside a <code>&lt;form&gt;</code> element, it is not expecting anything to be changed on the page because of a user selection. And it&rsquo;s also not expecting to be redirected elsewhere because of said user selection.</p>
+			<p>It&rsquo;s a farce because it <strong>goes against the inherent nature of the <code>&lt;select&gt;</code> element.</strong> The browser expects this to be used inside a <code>&lt;form&gt;</code> element, it is not expecting anything to be changed on the page because of a user selection. And it&rsquo;s also not expecting to be redirected elsewhere because of said user selection.</p>
 			<h2>Redoing the dropdown</h2>
 			<p>By redoing this as an unordered list with normal hyperlinks inside them, this is way more intuitive to the browser. It is also way easier to style, and can simply made to work cross-browser and on desktop, tablet and mobile. We can easily load in content via AJAX based on the link the user clicks on, or just send them on their merry way. <strong>Lastly, if JS is disabled for users, the links and experience will be just as the browsers intended them to be.</strong></p>
 
